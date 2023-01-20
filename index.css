@@ -1,0 +1,44 @@
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	color: #fff;
+}
+
+.container{
+  margin: 0 auto;
+	max-width: 100rem;
+  color: wheat;
+}
+
+.grid-3-cols{
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10rem;
+  column-gap: 5rem;
+  padding: 10rem 0;
+  justify-content: center;
+}
+
+.row{
+  width: 40rem;
+  height: 4rem;
+  display: flex;
+}
+
+.small-box{
+  width: 4rem;
+  display: inline-block;
+  border: .3rem solid black;
+}
