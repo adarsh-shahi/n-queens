@@ -1,4 +1,4 @@
-const n = 6;
+const n = 4;
 
 const algorithm = (n, arr, m) => {
 	if (arr.length === n) {
@@ -38,10 +38,15 @@ const algorithm = (n, arr, m) => {
 	return finalAns;
 };
 
+
+const h3 = document.createElement('h3');
 const renderGrid = (n) => {
 	const m = [];
 	algorithm(n, [], m);
-	console.log(m);
+	h3.innerHTML = ``;
+	h3.innerHTML = `${m.length} Possiblities !!`;
+	document.querySelector('.nav').appendChild(h3); 
+	document.querySelector('.grid-3-cols').innerHTML = ``;
 	for (let i = 0; i < m.length; i++) {
 		const div = document.createElement("div");
 		div.classList.add("possible");
@@ -74,4 +79,12 @@ const rowTemplate = (n, arr) => {
 	return boxDiv;
 };
 
-renderGrid(n);
+document.querySelector('.generate').addEventListener('click', (e) => {
+	e.preventDefault()
+	const data = document.querySelector('#pet-select').selectedIndex;
+	count = 1;
+	renderGrid(Number(data));
+})
+
+renderGrid(document.querySelector('#pet-select').selectedIndex);
+
