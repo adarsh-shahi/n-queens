@@ -12,7 +12,7 @@ html {
 body {
 	font-family: "Poppins", sans-serif;
 	font-weight: 400;
-	color: #fff;
+	color: black !important;
 }
 
 .container{
@@ -29,6 +29,16 @@ body {
   column-gap: 5rem;
   padding: 10rem 0;
   justify-content: center;
+  justify-items: center;
+}
+
+.possible {
+  justify-self: center;
+}
+
+.box{
+  color: black;
+  font-size: 2rem;
 }
 
 .row{
